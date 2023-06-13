@@ -71,12 +71,8 @@
   @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
 }
 
-.black_btn {
-  @apply rounded-full border border-black bg-black py-1.5 px-5 text-sm text-white transition-all hover:bg-white hover:text-black;
-}
-
-.head_text {
-  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl text-center;
+.nav {
+  @apply w-full flex justify-between items-center mb-10 pt-3;
 }
 
 .orange_gradient {
@@ -84,7 +80,7 @@
 }
 
 .desc {
-  @apply mt-5 text-lg text-gray-600 sm:text-xl text-center max-w-2xl;
+  @apply mt-5 text-lg text-orange-600 sm:text-xl text-center max-w-2xl;
 }
 
 .url_input {
