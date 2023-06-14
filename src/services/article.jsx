@@ -18,9 +18,12 @@ export const articleApi = createApi({
   }),
   endpoints: (builder) => ({
     getSummary: builder.query({
-      query: (params) => `/summarize?url=${params.articleUrl}&length=3`,
+      query: (params) =>
+        // encodeUricomponent - allows only string value and not just a character,
+        // as we know sometimes charaters are also ta treated as string.
+        `/summarize?url=${encodeURIComponent(params.articleUrl)}&length=3`,
     }),
   }),
 });
 
-export const { useGetSummaryQuery } = articleApi;
+export const { useLazyGetSummaryQuery } = articleApi;
